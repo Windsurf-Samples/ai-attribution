@@ -10,6 +10,7 @@ mkdir -p "$COMMIT_DIR"
 # Run stats collection and OTEL export in background
 HOOK_DIR="$(dirname "$0")"
 (
+  sleep 2 # Sleep to ensure git-ai is complete
   git-ai stats "$COMMIT_HASH" --json > "$COMMIT_DIR/stats.json"
   "$HOOK_DIR/otel-export.sh" "$COMMIT_HASH"
 ) &

@@ -2,6 +2,8 @@
 
 This repo is a demo of using Windsurf hooks to collect AI attribution data. It includes a simple UI to view the data in real-time.
 
+![UI Screenshot](assets/ui_screenshot.png)
+
 Note: this only works in Windsurf and has only been tested on MacOS
 
 # Setup: 

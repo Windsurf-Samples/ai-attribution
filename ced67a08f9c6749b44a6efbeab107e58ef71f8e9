@@ -1,0 +1,23 @@
+.githooks/post-commit
+  433ca17b922b5e2a 1-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "ced67a08f9c6749b44a6efbeab107e58ef71f8e9",
+  "prompts": {
+    "433ca17b922b5e2a": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "858fb760-934e-4f7d-b2f4-83ab9153a67f",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 33,
+      "total_deletions": 17,
+      "accepted_lines": 16,
+      "overriden_lines": 0
+    }
+  }
+}

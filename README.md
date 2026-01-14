@@ -8,5 +8,6 @@ This repo is a demo of using Windsurf hooks to collect AI attribution data. It i
 2. Run setup.sh to install the appropriate git-ai CLI and configure git hooks 
 
 # Running the UI to Track Commits
-1. cd demo-ui
-2. bun run dev
+1. Install bun (https://bun.sh/)
+1. ```cd demo-ui```
+2. ```bun run dev```

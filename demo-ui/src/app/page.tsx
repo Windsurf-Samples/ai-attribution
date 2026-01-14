@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useState } from 'react'
 
 interface CommitTrace {
   id: string
@@ -20,6 +20,7 @@ interface CommitTrace {
 export default function Home() {
   const [traces, setTraces] = useState<CommitTrace[]>([])
   const [connected, setConnected] = useState(false)
+  const [stats, setStats] = useState({ aiLines: 0, humanLines: 0, mixedLines: 0 })
 
   useEffect(() => {
     const fetchTraces = async () => {
@@ -27,6 +28,13 @@ export default function Home() {
         const response = await fetch('/api/events')
         const data = await response.json()
         setTraces(data.traces || [])
+        if (data.stats) {
+          setStats({
+            aiLines: data.stats.aiLines || 0,
+            humanLines: data.stats.humanLines || 0,
+            mixedLines: data.stats.mixedLines || 0,
+          })
+        }
         setConnected(true)
       } catch {
         setConnected(false)
@@ -47,18 +55,7 @@ export default function Home() {
     }
   }
 
-  const totals = useMemo(() => {
-    let aiLines = 0, humanLines = 0, mixedLines = 0
-    for (const trace of traces) {
-      const stats = parseAiStats(trace.aiStats)
-      if (stats) {
-        aiLines += stats.ai_additions || 0
-        humanLines += stats.human_additions || 0
-        mixedLines += stats.mixed_additions || 0
-      }
-    }
-    return { aiLines, humanLines, mixedLines }
-  }, [traces])
+  const totals = stats
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">

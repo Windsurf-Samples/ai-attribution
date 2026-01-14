@@ -22,17 +22,21 @@ export default function Home() {
   const [connected, setConnected] = useState(false)
 
   useEffect(() => {
-    const eventSource = new EventSource('/api/events')
-    
-    eventSource.onopen = () => setConnected(true)
-    eventSource.onerror = () => setConnected(false)
-    
-    eventSource.onmessage = (event) => {
-      const trace = JSON.parse(event.data) as CommitTrace
-      setTraces(prev => [trace, ...prev].slice(0, 100))
+    const fetchTraces = async () => {
+      try {
+        const response = await fetch('/api/events')
+        const data = await response.json()
+        setTraces(data.traces || [])
+        setConnected(true)
+      } catch {
+        setConnected(false)
+      }
     }
 
-    return () => eventSource.close()
+    fetchTraces()
+    const intervalId = setInterval(fetchTraces, 2000)
+
+    return () => clearInterval(intervalId)
   }, [])
 
   const parseAiStats = (stats: string) => {

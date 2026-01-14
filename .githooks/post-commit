@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Get commit info
+COMMIT_HASH=$(git rev-parse HEAD)
+
+# Create commit log directory
+COMMIT_DIR="$(git rev-parse --show-toplevel)/commit_logs/${COMMIT_HASH}"
+mkdir -p "$COMMIT_DIR"
+
+# Write stats.log
+git-ai stats "$COMMIT_HASH" > "$COMMIT_DIR/stats.log"
+
+# Write show.log
+git-ai show "$COMMIT_HASH" > "$COMMIT_DIR/show.log"
+
+echo "Commit logged to $COMMIT_DIR/"

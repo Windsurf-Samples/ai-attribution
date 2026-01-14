@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "post_write_code": [
+      {
+        "command": "REPO_DIR=$(pwd) && cat | jq --arg repo \"$REPO_DIR\" '. + {type: \"ai_agent\", repo_working_dir: $repo, transcript: {messages: []}, agent_name: \"windsurf\", conversation_id: .trajectory_id, model: \"unknown\", edited_filepaths: [.tool_info.file_path]}' | git-ai checkpoint agent-v1 --hook-input stdin",
+        "show_output": true
+      }
+    ],
+    "pre_write_code": [
+      {
+        "command": "REPO_DIR=$(pwd) && echo \"{\\\"type\\\": \\\"human\\\", \\\"repo_working_dir\\\": \\\"$REPO_DIR\\\"}\" | git-ai checkpoint agent-v1 --hook-input stdin",
+        "show_output": true
+      }
+    ]
+  },
+  "version": 1
+}

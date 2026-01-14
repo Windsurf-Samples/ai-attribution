@@ -1,0 +1,25 @@
+demo-ui/src/app/page.tsx
+  282f04d862aa34fa 25-33,36-39
+demo-ui/src/app/api/events/route.ts
+  282f04d862aa34fa 6-7,9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "50a1407a543c818615af41537b26fa6df5ab0996",
+  "prompts": {
+    "282f04d862aa34fa": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "ca70a0c3-54b8-4cde-9458-5cf09dcfe668",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 25,
+      "total_deletions": 55,
+      "accepted_lines": 18,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -11,6 +11,6 @@ mkdir -p "$COMMIT_DIR"
 git-ai stats "$COMMIT_HASH" > "$COMMIT_DIR/stats.log"
 
 # Write show.log
-git-ai show "$COMMIT_HASH" > "$COMMIT_DIR/show.log"
+git-ai show --json "$COMMIT_HASH" > "$COMMIT_DIR/show.log"
 
 echo "Commit logged to $COMMIT_DIR/"

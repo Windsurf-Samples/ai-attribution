@@ -1,0 +1,23 @@
+setup.sh
+  722aabc5a228cbca 1-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "783dac94dc469f87e935421c20fded8a8c9c59e6",
+  "prompts": {
+    "722aabc5a228cbca": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "033bc49d-d5a2-49de-b89e-fe3300657e52",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 13,
+      "total_deletions": 0,
+      "accepted_lines": 13,
+      "overriden_lines": 0
+    }
+  }
+}

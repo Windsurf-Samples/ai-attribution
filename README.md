@@ -13,3 +13,7 @@ Note: this only works in Windsurf and has only been tested on MacOS
 1. Install npm (https://nodejs.org/)
 1. ```cd demo-ui```
 2. ```npm run dev```
+
+# Learn More
+
+See [HOW_THIS_WORKS.md](HOW_THIS_WORKS.md) for a detailed explanation.

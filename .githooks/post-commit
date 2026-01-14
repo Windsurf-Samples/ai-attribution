@@ -8,9 +8,9 @@ COMMIT_DIR="$(git rev-parse --show-toplevel)/commit_logs/${COMMIT_HASH}"
 mkdir -p "$COMMIT_DIR"
 
 # Write stats.log
-git-ai stats "$COMMIT_HASH" > "$COMMIT_DIR/stats.log"
+git-ai stats "$COMMIT_HASH" > "$COMMIT_DIR/stats.log" 2>&1
 
 # Write show.log
-git-ai show --json "$COMMIT_HASH" > "$COMMIT_DIR/show.log"
+git-ai show "$COMMIT_HASH" > "$COMMIT_DIR/show.log"
 
 echo "Commit logged to $COMMIT_DIR/"

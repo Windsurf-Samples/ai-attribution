@@ -1,0 +1,23 @@
+.githooks/otel-export.sh
+  983d7d9bedcd61d7 21-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "aae472cd93b6bf61d67f2fd0fda95d43ace80e20",
+  "prompts": {
+    "983d7d9bedcd61d7": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "2fcf3b52-9786-407d-9b84-1578a3fb6189",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 2,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}

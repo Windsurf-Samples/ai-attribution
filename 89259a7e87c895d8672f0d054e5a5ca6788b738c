@@ -1,0 +1,47 @@
+demo-ui/src/app/api/v1/traces/route.ts
+  983d7d9bedcd61d7 1-78
+demo-ui/src/app/api/events/route.ts
+  983d7d9bedcd61d7 1-48
+demo-ui/src/lib/traceStore.ts
+  983d7d9bedcd61d7 1-40
+demo-ui/.gitignore
+  983d7d9bedcd61d7 1-3
+demo-ui/postcss.config.js
+  983d7d9bedcd61d7 1-6
+demo-ui/package.json
+  983d7d9bedcd61d7 1-23
+demo-ui/tsconfig.json
+  983d7d9bedcd61d7 1-20
+demo-ui/src/app/page.tsx
+  983d7d9bedcd61d7 1-130
+demo-ui/tailwind.config.js
+  983d7d9bedcd61d7 1-10
+demo-ui/next.config.js
+  983d7d9bedcd61d7 1-6
+demo-ui/src/app/layout.tsx
+  983d7d9bedcd61d7 1-21
+demo-ui/src/app/globals.css
+  983d7d9bedcd61d7 1-7
+demo-ui/README.md
+  983d7d9bedcd61d7 1-32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "89259a7e87c895d8672f0d054e5a5ca6788b738c",
+  "prompts": {
+    "983d7d9bedcd61d7": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "2fcf3b52-9786-407d-9b84-1578a3fb6189",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 433,
+      "total_deletions": 9,
+      "accepted_lines": 424,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -7,12 +7,12 @@ COMMIT_HASH=$(git rev-parse HEAD)
 COMMIT_DIR="$(git rev-parse --show-toplevel)/commit_logs/${COMMIT_HASH}"
 mkdir -p "$COMMIT_DIR"
 
-# Run stats collection and OTEL export in background
+# Run stats collection and OTEL export in background (fully detached)
 HOOK_DIR="$(dirname "$0")"
 (
   sleep 2 # Sleep to ensure git-ai is complete
   git-ai stats "$COMMIT_HASH" --json > "$COMMIT_DIR/stats.json"
   "$HOOK_DIR/otel-export.sh" "$COMMIT_HASH"
-) &
+) > "$COMMIT_DIR/hook.log" 2>&1 & # confirm that hook is fired
 
 echo "Commit logged to $COMMIT_DIR/"

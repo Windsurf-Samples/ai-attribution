@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'OTEL Commit Viewer',
-  description: 'Real-time viewer for git commit traces',
+  title: 'AI Attribution Tracker',
+  description: 'Real-time AI code attribution tracking for git commits',
 }
 
 export default function RootLayout({

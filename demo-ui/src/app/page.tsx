@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 interface CommitTrace {
   id: string
@@ -51,9 +52,14 @@ export default function Home() {
             <h1 className="text-3xl font-bold text-white">OTEL Commit Viewer</h1>
             <p className="text-gray-400 mt-1">Real-time git commit traces</p>
           </div>
-          <div className="flex items-center gap-2">
-            <span className={`w-3 h-3 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`} />
-            <span className="text-sm text-gray-400">{connected ? 'Connected' : 'Disconnected'}</span>
+          <div className="flex items-center gap-4">
+            <Link href="/metrics" className="text-blue-400 hover:text-blue-300 text-sm">
+              View Metrics →
+            </Link>
+            <div className="flex items-center gap-2">
+              <span className={`w-3 h-3 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`} />
+              <span className="text-sm text-gray-400">{connected ? 'Connected' : 'Disconnected'}</span>
+            </div>
           </div>
         </div>
       </header>

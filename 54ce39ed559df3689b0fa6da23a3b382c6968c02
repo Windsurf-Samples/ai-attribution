@@ -1,0 +1,25 @@
+.gitignore
+  433ca17b922b5e2a 1
+.githooks/post-commit
+  433ca17b922b5e2a 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "54ce39ed559df3689b0fa6da23a3b382c6968c02",
+  "prompts": {
+    "433ca17b922b5e2a": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "858fb760-934e-4f7d-b2f4-83ab9153a67f",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 1,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -58,10 +58,10 @@ class TraceStore {
     
     try {
       const stats = JSON.parse(trace.aiStats.replace(/\\"/g, '"'))
-      aiLines = stats.ai_lines || 0
-      humanLines = stats.human_lines || 0
-      mixedLines = stats.mixed_lines || 0
-      totalLines = stats.total_lines || (aiLines + humanLines + mixedLines)
+      aiLines = stats.ai_additions || 0
+      humanLines = stats.human_additions || 0
+      mixedLines = stats.mixed_additions || 0
+      totalLines = aiLines + humanLines + mixedLines
     } catch {
       // Stats parsing failed, skip
     }

@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import { useEffect, useState, useMemo } from 'react'
 
 interface CommitTrace {
   id: string
@@ -44,25 +43,49 @@ export default function Home() {
     }
   }
 
+  const totals = useMemo(() => {
+    let aiLines = 0, humanLines = 0, mixedLines = 0
+    for (const trace of traces) {
+      const stats = parseAiStats(trace.aiStats)
+      if (stats) {
+        aiLines += stats.ai_additions || 0
+        humanLines += stats.human_additions || 0
+        mixedLines += stats.mixed_additions || 0
+      }
+    }
+    return { aiLines, humanLines, mixedLines }
+  }, [traces])
+
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">
-      <header className="mb-8">
+      <header className="mb-6">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-white">OTEL Commit Viewer</h1>
             <p className="text-gray-400 mt-1">Real-time git commit traces</p>
           </div>
-          <div className="flex items-center gap-4">
-            <Link href="/metrics" className="text-blue-400 hover:text-blue-300 text-sm">
-              View Metrics →
-            </Link>
-            <div className="flex items-center gap-2">
-              <span className={`w-3 h-3 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`} />
-              <span className="text-sm text-gray-400">{connected ? 'Connected' : 'Disconnected'}</span>
-            </div>
+          <div className="flex items-center gap-2">
+            <span className={`w-3 h-3 rounded-full ${connected ? 'bg-green-500' : 'bg-red-500'}`} />
+            <span className="text-sm text-gray-400">{connected ? 'Connected' : 'Disconnected'}</span>
           </div>
         </div>
       </header>
+
+      {/* Aggregate Metrics */}
+      <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+          <p className="text-gray-500 text-sm">Lines written by AI</p>
+          <p className="text-2xl font-bold text-purple-400">{totals.aiLines.toLocaleString()}</p>
+        </div>
+        <div className="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+          <p className="text-gray-500 text-sm">Lines written by human</p>
+          <p className="text-2xl font-bold text-blue-400">{totals.humanLines.toLocaleString()}</p>
+        </div>
+        <div className="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center">
+          <p className="text-gray-500 text-sm">Lines written by both</p>
+          <p className="text-2xl font-bold text-amber-400">{totals.mixedLines.toLocaleString()}</p>
+        </div>
+      </div>
 
       {traces.length === 0 ? (
         <div className="text-center py-20 text-gray-500">

@@ -46,4 +46,4 @@ The export script:
 
 ## Environment Variables
 
-- `OTEL_EXPORTER_OTLP_ENDPOINT`: Override the default OTEL endpoint (e.g., for production collectors)
+- `OTEL_EXPORTER_OTLP_ENDPOINT`: Override the default OTEL endpoint (e.g., for remote webservice collectors)

@@ -1,0 +1,23 @@
+demo-ui/src/app/page.tsx
+  d30408a2ea5ecab6 3,23,31-37,58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "6425bd3e1474b7b89a3edf288abb05139946ed50",
+  "prompts": {
+    "d30408a2ea5ecab6": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "10d63fab-5a75-4971-b528-45b678ff3fbf",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 10,
+      "total_deletions": 13,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    }
+  }
+}

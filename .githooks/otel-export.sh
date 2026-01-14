@@ -18,8 +18,8 @@ REPO_NAME=$(basename "$(git rev-parse --show-toplevel)")
 # Get git-ai stats (escape for JSON embedding)
 GIT_AI_STATS=$(git-ai stats "$COMMIT_HASH" --json 2>/dev/null | tr -d '\n' | sed 's/"/\\"/g' || echo "{}")
 
-# Configure OTEL endpoint (defaults to localhost collector)
-OTEL_ENDPOINT="${OTEL_EXPORTER_OTLP_ENDPOINT:-http://localhost:4318}/v1/traces"
+# Configure OTEL endpoint (defaults to local demo-ui app)
+OTEL_ENDPOINT="${OTEL_EXPORTER_OTLP_ENDPOINT:-http://localhost:3000/api}/v1/traces"
 
 # Generate trace and span IDs (32 and 16 hex chars respectively)
 TRACE_ID=$(printf '%032x' "$(od -An -tu8 -N16 /dev/urandom | tr -d ' ')" 2>/dev/null || echo "$(date +%s%N)$(echo $COMMIT_HASH | cut -c1-16)" | md5 | cut -c1-32)

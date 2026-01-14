@@ -126,10 +126,6 @@ export default function Home() {
                     <span className="text-gray-500">Repository</span>
                     <p className="text-gray-300">{trace.repo}</p>
                   </div>
-                  <div>
-                    <span className="text-gray-500">Trace ID</span>
-                    <p className="text-gray-300 font-mono text-xs truncate">{trace.traceId}</p>
-                  </div>
                 </div>
 
                 {stats && (

@@ -1,0 +1,29 @@
+demo-ui/src/app/api/stats/route.ts
+  983d7d9bedcd61d7 1-41
+demo-ui/src/app/metrics/page.tsx
+  983d7d9bedcd61d7 1-200
+demo-ui/src/app/page.tsx
+  983d7d9bedcd61d7 4,55-59,61-62
+demo-ui/src/lib/traceStore.ts
+  983d7d9bedcd61d7 2,19-28,32-41,48-51,53-91,98-101,106-109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "c4bd54130b5c94402c0518faca06dd571f914d46",
+  "prompts": {
+    "983d7d9bedcd61d7": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "2fcf3b52-9786-407d-9b84-1578a3fb6189",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 323,
+      "total_deletions": 3,
+      "accepted_lines": 322,
+      "overriden_lines": 0
+    }
+  }
+}

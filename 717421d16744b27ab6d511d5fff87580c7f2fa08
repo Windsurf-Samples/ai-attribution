@@ -1,0 +1,25 @@
+demo-ui/src/app/layout.tsx
+  58d69e0b505fa177 5-6
+demo-ui/src/app/page.tsx
+  58d69e0b505fa177 65-66,137-138,140,145,151-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "717421d16744b27ab6d511d5fff87580c7f2fa08",
+  "prompts": {
+    "58d69e0b505fa177": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "edd106f0-2980-480a-8636-76c461c9113a",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 8,
+      "accepted_lines": 22,
+      "overriden_lines": 0
+    }
+  }
+}

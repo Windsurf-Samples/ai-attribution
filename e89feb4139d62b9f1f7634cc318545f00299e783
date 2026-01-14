@@ -1,0 +1,27 @@
+.githooks/post-commit
+  433ca17b922b5e2a 1-26
+demo/script_2.py
+  433ca17b922b5e2a 1-367
+demo/script_1.py
+  433ca17b922b5e2a 1-205
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "e89feb4139d62b9f1f7634cc318545f00299e783",
+  "prompts": {
+    "433ca17b922b5e2a": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "858fb760-934e-4f7d-b2f4-83ab9153a67f",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 613,
+      "total_deletions": 15,
+      "accepted_lines": 598,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -11,5 +11,3 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 (
   git-ai checkpoint
 ) > "$CHECKPOINT_DIR/checkpoint_${TIMESTAMP}.log" 2>&1 &
-
-echo "Pre-commit checkpoint initiated"

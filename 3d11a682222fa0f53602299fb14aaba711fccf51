@@ -1,0 +1,21 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "3d11a682222fa0f53602299fb14aaba711fccf51",
+  "prompts": {
+    "fec174d7cf204c40": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "333dc575-8d4e-42c8-a847-033ea2158595",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 2,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}

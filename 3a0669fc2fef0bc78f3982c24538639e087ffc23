@@ -1,0 +1,23 @@
+.githooks/pre-commit
+  1f7b9549ef7424ae 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "3a0669fc2fef0bc78f3982c24538639e087ffc23",
+  "prompts": {
+    "1f7b9549ef7424ae": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "3ac9b3e0-4677-4c10-a720-d57717964348",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 15,
+      "total_deletions": 0,
+      "accepted_lines": 15,
+      "overriden_lines": 0
+    }
+  }
+}

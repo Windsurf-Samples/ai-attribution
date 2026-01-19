@@ -1,0 +1,23 @@
+demo-code-to-change/script_1.py
+  2e903a12675ca7c6 65,72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.31",
+  "base_commit_sha": "438133f6196b213ea934d1a68d9024d1c107b76b",
+  "prompts": {
+    "2e903a12675ca7c6": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "e2977c0c-994f-4b5c-9ed0-28e1515d1fe5",
+        "model": "unknown"
+      },
+      "human_author": "iancmoritz <ian.moritz99@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}

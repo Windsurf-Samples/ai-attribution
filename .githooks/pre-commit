@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Create checkpoint log directory
+CHECKPOINT_DIR="$(git rev-parse --show-toplevel)/commit_logs/checkpoints"
+mkdir -p "$CHECKPOINT_DIR"
+
+# Generate timestamp for this checkpoint
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+
+# Run git-ai checkpoint in background (fully detached)
+(
+  git-ai checkpoint
+) > "$CHECKPOINT_DIR/checkpoint_${TIMESTAMP}.log" 2>&1 &
+
+echo "Pre-commit checkpoint initiated"

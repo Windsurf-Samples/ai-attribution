@@ -62,12 +62,14 @@ class DataProcessor:
                 "median": statistics.median(prices),
                 "min": min(prices),
                 "max": max(prices),
+                "stdev": statistics.stdev(prices) if len(prices) > 1 else 0
             },
             "quantity_stats": {
                 "mean": statistics.mean(quantities),
                 "median": statistics.median(quantities),
                 "min": min(quantities),
                 "max": max(quantities),
+                "stdev": statistics.stdev(quantities) if len(quantities) > 1 else 0
             },
             "rating_stats": {
                 "mean": statistics.mean(ratings),
